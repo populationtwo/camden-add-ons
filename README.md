@@ -1,4 +1,4 @@
-# Camden Add Ons
+# Camden Add-ons
 
 Camden theme add-ons. This plugin enable short codes in Camden theme.
 
