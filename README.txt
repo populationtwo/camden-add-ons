@@ -8,7 +8,7 @@ Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Camden theme add-ons. This plugin enable the Custom Post Types and Shortcodes in Camden theme.
+Camden theme add-ons. This plugin enable short codes in Camden theme.
 
 == Installation ==
 
