@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Camden Add-ons ===
 Contributors: Population2
 Donate link: http://population-2.com
 Tags: shortcode
