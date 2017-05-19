@@ -4,10 +4,19 @@ Camden theme add-ons. This plugin enable short codes in Camden theme.
 
 ## Installation
 
-1. Upload `camden-add-ons.php` to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
 
+### Using The WordPress Dashboard
+1. Navigate to the 'Add New' in the plugins dashboard
+2. Search for 'Camden Add-ons'
+3. Click 'Install Now'
+4. Activate the plugin on the Plugin dashboard
+
+### Using FTP
+1. Download `camden-add-ons.zip`
+2. Extract the `camden-add-ons` directory to your computer
+3. Upload the `camden-add-ons` directory to the `/wp-content/plugins/` directory
+4. Activate the plugin in the Plugin dashboard
+ 
 
 ## Changelog
 
