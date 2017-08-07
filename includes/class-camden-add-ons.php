@@ -74,7 +74,7 @@ class Camden_Add_Ons {
 		$this->load_dependencies();
 		$this->set_locale();
 		$this->define_admin_hooks();
-//		$this->define_public_hooks();
+		$this->define_public_hooks();
 
 	}
 
@@ -120,7 +120,7 @@ class Camden_Add_Ons {
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-//		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-camden-add-ons-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-camden-add-ons-public.php';
 
 		$this->loader = new Camden_Add_Ons_Loader();
 
@@ -183,14 +183,14 @@ class Camden_Add_Ons {
 	 * @since    1.0.0
 	 * @access   private
 	 */
-//	private function define_public_hooks() {
-//
-//		$plugin_public = new Camden_Add_Ons_Public( $this->get_plugin_name(), $this->get_version() );
-//
-//		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-//		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
-//
-//	}
+	private function define_public_hooks() {
+
+		$plugin_public = new Camden_Add_Ons_Public( $this->get_plugin_name(), $this->get_version() );
+
+		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
+		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+
+	}
 
 	/**
 	 * Run the loader to execute all of the hooks with WordPress.
