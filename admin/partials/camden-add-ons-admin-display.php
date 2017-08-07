@@ -5,7 +5,7 @@
  *
  * This file is used to markup the admin-facing aspects of the plugin.
  *
- * @link       http://population-2.com
+ * @link       https://github.com/populationtwo/camden-add-ons
  * @since      1.0.0
  *
  * @package    Camden_Add_Ons
