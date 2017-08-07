@@ -6,7 +6,7 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       http://population-2.com
+ * @link       https://github.com/populationtwo/camden-add-ons
  * @since      1.0.0
  *
  * @package    Camden_Add_Ons
@@ -35,7 +35,7 @@ class Camden_Add_Ons {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Camden_Add_Ons_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Camden_Add_Ons_Loader $loader Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -44,7 +44,7 @@ class Camden_Add_Ons {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      string    $plugin_name    The string used to uniquely identify this plugin.
+	 * @var      string $plugin_name The string used to uniquely identify this plugin.
 	 */
 	protected $plugin_name;
 
@@ -53,7 +53,7 @@ class Camden_Add_Ons {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      string    $version    The current version of the plugin.
+	 * @var      string $version The current version of the plugin.
 	 */
 	protected $version;
 
@@ -69,7 +69,7 @@ class Camden_Add_Ons {
 	public function __construct() {
 
 		$this->plugin_name = 'camden-add-ons';
-		$this->version = '1.0.0';
+		$this->version     = '1.0.0';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -154,28 +154,13 @@ class Camden_Add_Ons {
 
 		$plugin_admin = new Camden_Add_Ons_Admin( $this->get_plugin_name(), $this->get_version() );
 
-//		$this->loader->add_action( 'init', $plugin_admin, 'camden_register_post_type_slides' );
-//		$this->loader->add_action( 'init', $plugin_admin, 'camden_register_post_type_gallery' );
-//		$this->loader->add_action( 'init', $plugin_admin, 'camden_register_post_type_testimonial' );
-//		$this->loader->add_action( 'init', $plugin_admin, 'camden_gallery_taxonomies' );
-//		$this->loader->add_filter( 'post_updated_messages', $plugin_admin, 'camden_slide_updated_messages' );
-//		$this->loader->add_filter( 'post_updated_messages', $plugin_admin, 'camden_gallery_updated_messages' );
-//		$this->loader->add_filter( 'post_updated_messages', $plugin_admin, 'camden_testimonial_updated_messages' );
-
-				$this->loader->add_filter( 'admin_enqueue_scripts', $plugin_admin, 'camden_tinymce_css' );
-//				$this->loader->add_filter( 'admin_head', $plugin_admin, 'camden_add_tinymce_button' );
-				$this->loader->add_filter( 'mce_external_plugins', $plugin_admin, 'camden_add_tinymce_plugin' );
-				$this->loader->add_filter( 'mce_buttons', $plugin_admin, 'camden_register_tinymce_button' );
-
-
-		
-
-//		add_filter('mce_external_plugins', 'camden_add_tinymce_plugin');
-//		add_filter('mce_buttons', 'camden_register_tinymce_button');
+		$this->loader->add_filter( 'admin_enqueue_scripts', $plugin_admin, 'camden_tinymce_css' );
+		$this->loader->add_filter( 'mce_external_plugins', $plugin_admin, 'camden_add_tinymce_plugin' );
+		$this->loader->add_filter( 'mce_buttons', $plugin_admin, 'camden_register_tinymce_button' );
 
 	}
 
-	
+
 	/**
 	 * Register all of the hooks related to the public-facing functionality
 	 * of the plugin.
@@ -186,9 +171,6 @@ class Camden_Add_Ons {
 	private function define_public_hooks() {
 
 		$plugin_public = new Camden_Add_Ons_Public( $this->get_plugin_name(), $this->get_version() );
-
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
 	}
 

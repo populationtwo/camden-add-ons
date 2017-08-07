@@ -6,7 +6,7 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       http://population-2.com
+ * @link       https://github.com/populationtwo/camden-add-ons
  * @since      1.0.0
  *
  * @package    Camden_Add_Ons
