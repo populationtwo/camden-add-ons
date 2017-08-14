@@ -171,7 +171,7 @@ class Camden_Add_Ons_Public {
 			'singular_name'      => _x( 'Slide', 'Post Type Singular Name', 'camden-add-ons' ),
 			'menu_name'          => __( 'Slide', 'camden-add-ons' ),
 			'parent_item_colon'  => __( 'Parent Slide:', 'camden-add-ons' ),
-			'all_items'          => __( 'All Slides:', 'camden-add-ons' ),
+			'all_items'          => __( 'All Slides', 'camden-add-ons' ),
 			'view_item'          => __( 'Slide', 'camden-add-ons' ),
 			'add_new_item'       => __( 'Add New Slide', 'camden-add-ons' ),
 			'add_new'            => __( 'New Slide', 'camden-add-ons' ),
