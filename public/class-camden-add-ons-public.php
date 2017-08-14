@@ -71,7 +71,7 @@ class Camden_Add_Ons_Public {
 			'singular_name'      => _x( 'Ministry', 'Post Type Singular Name', 'camden-add-ons' ),
 			'menu_name'          => __( 'Ministry', 'camden-add-ons' ),
 			'parent_item_colon'  => __( 'Parent Ministry:', 'camden-add-ons' ),
-			'all_items'          => __( 'All Ministries:', 'camden-add-ons' ),
+			'all_items'          => __( 'All Ministries', 'camden-add-ons' ),
 			'view_item'          => __( 'View Ministry', 'camden-add-ons' ),
 			'add_new_item'       => __( 'Add New Ministry', 'camden-add-ons' ),
 			'add_new'            => __( 'New Ministry', 'camden-add-ons' ),
