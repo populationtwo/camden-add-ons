@@ -6,9 +6,9 @@ Camden theme add-ons. This plugin enable short codes and custom post types in Ca
 
 
 ### Using The WordPress Dashboard
-1. Navigate to the 'Add New' in the plugins dashboard
-2. Search for 'Camden Add-ons'
-3. Click 'Install Now'
+1. Download `camden-add-ons.zip`
+2. Navigate to the 'Add New' in the plugins dashboard
+3. Click 'Upload Plugin' and choose `camden-add-ons.zip`
 4. Activate the plugin on the Plugin dashboard
 
 ### Using FTP
