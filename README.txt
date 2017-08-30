@@ -4,11 +4,11 @@ Donate link: http://population-2.com
 Tags: shortcode
 Requires at least: 3.0.1
 Tested up to: 4.7
-Stable tag: 1.1.0
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Camden theme add-ons. This plugin enable short codes in Camden theme.
+Camden theme add-ons. This plugin enable short codes and custom post types in Camden theme.
 
 == Installation ==
 
@@ -30,4 +30,4 @@ Camden theme add-ons. This plugin enable short codes in Camden theme.
 == Changelog ==
 
 = 1.0 =
-* Initial relelase
+* Initial release

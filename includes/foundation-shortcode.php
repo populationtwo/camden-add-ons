@@ -1386,4 +1386,3 @@ function camden_foundation_accordion_pane( $params, $content = null ) {
 add_shortcode( 'accs', 'camden_foundation_accordion' );
 add_shortcode( 'acc', 'camden_foundation_accordion_pane' );
 
-?>

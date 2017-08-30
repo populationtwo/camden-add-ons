@@ -1,6 +1,6 @@
 # Camden Add-ons
 
-Camden theme add-ons. This plugin enable short codes in Camden theme.
+Camden theme add-ons. This plugin enable short codes and custom post types in Camden theme.
 
 ## Installation
 
@@ -20,5 +20,5 @@ Camden theme add-ons. This plugin enable short codes in Camden theme.
 
 ## Changelog
 
-#### 1.0
-* Initial relelase
+#### 1.0.0
+* Initial release
