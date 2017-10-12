@@ -72,11 +72,12 @@ class REQ_Alertbox {
 
 		/* Output */
 		$size            = '';
-		$closebutton     = '<button class="close-button" aria-label="Dismiss alert" type="button" data-close>';
-		$closebutton     .= '<span aria-hidden="true">&times;</span>';
-		$closebutton     .= '</button>';
-		$type            = '';
-		$closebuttondata = 'data-closable';
+        $timeout         = '';
+        $closebutton     = '<button class="close-button" aria-label="Dismiss alert" type="button" data-close>';
+        $closebutton     .= '<span aria-hidden="true">&times;</span>';
+        $closebutton     .= '</button>';
+        $type            = '';
+        $closebuttondata = 'data-closable';
 
 		/* Check for a custom timeout */
 		if ( ! empty( $attr['timeout'] ) ) {
