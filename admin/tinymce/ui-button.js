@@ -48,125 +48,13 @@
                                 e.stopPropagation();
                                 editor.insertContent("[two_third_alpha] Insert content here [/two_third_alpha] [one_third_omega] Insert content here[/one_third_omega]");
                             }
-                        }
-                    ]
-                },
-                {
-                    text: 'UI',
-                    value: 'UI',
-                    menu: [
-                        {
-                            text: 'Accordion',
-                            value: 'accordion',
-                            onclick: function (e) {
-                                e.stopPropagation();
-                                editor.insertContent("[accs class=\"optionalclass\"][acc active=\"is-active\" title=\"Accordion 1\"]Accordion pane 1 content goes here.[/acc][acc title=\"Accordion 2\"]Accordion pane 2 content goes here.[/acc][acc title=\"Accordion 3\"]Accordion pane 3 content goes here.[/acc][acc title=\"Accordion 4\"]Accordion pane 4 content goes here.[/acc][/accs]")
-
-                            }
                         },
                         {
-                            text: 'Tabs',
-                            value: 'tabs',
-                            onclick: function (e) {
-                                e.stopPropagation();
-                                editor.insertContent("[tabs class=\"optionalclass\"][tab title=\"Tab 1\" active=\"is-active\"]Insert Tab 1 content here.[/tab][tab title=\"Tab 2\"]Insert Tab 2 content here.[/tab][tab title=\"Tab 3\"]Insert Tab 3 content here.[/tab][tab title=\"Tab 4\"]Insert Tab 4 content here.[/tab][/tabs]")
-                            }
-                        },
-                        {
-                            text: 'Vertical Tabs',
-                            value: 'vertical tabs',
-                            onclick: function (e) {
-                                e.stopPropagation();
-                                editor.insertContent("[vtabs class=\"optionalclass\"] [vtab title=\"Tab 1 Title\" active=\"is-active\"] Insert Tab 1 content here [/vtab] [vtab title=\"Tab 2 Title\"] Insert Tab 2 content here [/vtab] [vtab title=\"Tab 3 Title\"] Insert Tab 3 content here [/vtab] [/vtabs]")
-                            }
-                        },
-                        {
-                            text: 'Callout',
-                            onclick: function () {
-                                editor.windowManager.open({
-                                    title: 'Insert callout',
-                                    body: [
-                                        {
-                                            type: 'textbox',
-                                            name: 'title',
-                                            label: 'Callout text'
-                                        },
-                                        {
-                                            type: 'listbox',
-                                            name: 'type',
-                                            label: 'Callout type',
-                                            'values': [
-                                                {text: 'Standard', value: ''},
-                                                {text: 'Success', value: 'success'},
-                                                {text: 'Warning', value: 'warning'},
-                                                {text: 'Alert', value: 'alert'},
-                                                {text: 'Primary', value: 'primary'},
-                                                {text: 'Secondary', value: 'secondary'}
-                                            ]
-                                        },
-                                        {
-                                            type: 'checkbox',
-                                            name: 'close',
-                                            checked: false,
-                                            label: 'Add close button?'
-                                        }
-                                    ],
-                                    onsubmit: function (e) {
-                                        var setType;
-                                        var setClose;
-                                        if (e.data.type) {
-                                            setType = "type=\"" + e.data.type + "\""
-                                        } else {
-                                            setType = ""
-                                        }
-
-                                        if (e.data.close) {
-                                            setClose = ""
-                                        } else {
-                                            setClose = "close=no"
-                                        }
-                                        editor.insertContent("[callout " + ' ' + setType + ' ' + setClose + "] " + e.data.title + " [/callout]");
-                                    }
-                                })
-                            }
-                        }
-
-                    ]
-                },
-                {
-                    text: 'Foundation Elements',
-                    value: 'foundation',
-                    menu: [
-                        {
-                            text: 'Grid Columns',
-                            value: 'grid',
+                            text: 'Custom',
+                            value: 'custom',
                             onclick: function (e) {
                                 e.stopPropagation();
                                 editor.insertContent("[column columns=12] Insert content here [/column]")
-                            }
-                        },
-                        {
-                            text: 'Orbit',
-                            value: 'orbit',
-                            onclick: function (e) {
-                                e.stopPropagation();
-                                editor.insertContent("[orbit]")
-                            }
-                        },
-                        {
-                            text: 'Tooltip',
-                            value: 'tooltip',
-                            onclick: function (e) {
-                                e.stopPropagation();
-                                editor.insertContent("[tooltip position=\"top\" title=\"Insert Tooltip content here\" ]Tooltip[/tooltip]")
-                            }
-                        },
-                        {
-                            text: 'Reveal',
-                            value: 'reveal',
-                            onclick: function (e) {
-                                e.stopPropagation();
-                                editor.insertContent("[reveal link=\"Link text\" linkclass=\"button radius secondary\" class=\"small\" ]Insert Reveal content here[/reveal]")
                             }
                         }
                     ]
@@ -216,6 +104,120 @@
                             }
                         }
                     ]
+                },
+                {
+                    text: 'Media',
+                    value: 'media',
+                    menu: [
+                        // {
+                        //     text: 'Grid Columns',
+                        //     value: 'grid',
+                        //     onclick: function (e) {
+                        //         e.stopPropagation();
+                        //         editor.insertContent("[column columns=12] Insert content here [/column]")
+                        //     }
+                        // },
+                        {
+                            text: 'Orbit',
+                            value: 'orbit',
+                            onclick: function (e) {
+                                e.stopPropagation();
+                                editor.insertContent("[orbit]")
+                            }
+                        },
+
+                        {
+                            text: 'Reveal',
+                            value: 'reveal',
+                            onclick: function (e) {
+                                e.stopPropagation();
+                                editor.insertContent("[reveal link=\"Link text\" linkclass=\"button radius secondary\" class=\"small\" ]Insert Reveal content here[/reveal]")
+                            }
+                        }
+                    ]
+                },
+                {
+                    text: 'Accordion',
+                    value: 'accordion',
+                    onclick: function (e) {
+                        e.stopPropagation();
+                        editor.insertContent("[accs class=\"optionalclass\"][acc active=\"is-active\" title=\"Accordion 1\"]Accordion pane 1 content goes here.[/acc][acc title=\"Accordion 2\"]Accordion pane 2 content goes here.[/acc][acc title=\"Accordion 3\"]Accordion pane 3 content goes here.[/acc][acc title=\"Accordion 4\"]Accordion pane 4 content goes here.[/acc][/accs]")
+
+                    }
+                },
+                {
+                    text: 'Tabs',
+                    value: 'tabs',
+                    onclick: function (e) {
+                        e.stopPropagation();
+                        editor.insertContent("[tabs class=\"optionalclass\"][tab title=\"Tab 1\" active=\"is-active\"]Insert Tab 1 content here.[/tab][tab title=\"Tab 2\"]Insert Tab 2 content here.[/tab][tab title=\"Tab 3\"]Insert Tab 3 content here.[/tab][tab title=\"Tab 4\"]Insert Tab 4 content here.[/tab][/tabs]")
+                    }
+                },
+                {
+                    text: 'Vertical Tabs',
+                    value: 'vertical tabs',
+                    onclick: function (e) {
+                        e.stopPropagation();
+                        editor.insertContent("[vtabs class=\"optionalclass\"] [vtab title=\"Tab 1 Title\" active=\"is-active\"] Insert Tab 1 content here [/vtab] [vtab title=\"Tab 2 Title\"] Insert Tab 2 content here [/vtab] [vtab title=\"Tab 3 Title\"] Insert Tab 3 content here [/vtab] [/vtabs]")
+                    }
+                },
+                {
+                    text: 'Callout',
+                    onclick: function () {
+                        editor.windowManager.open({
+                            title: 'Insert callout',
+                            body: [
+                                {
+                                    type: 'textbox',
+                                    name: 'title',
+                                    label: 'Callout text'
+                                },
+                                {
+                                    type: 'listbox',
+                                    name: 'type',
+                                    label: 'Callout type',
+                                    'values': [
+                                        {text: 'Standard', value: ''},
+                                        {text: 'Success', value: 'success'},
+                                        {text: 'Warning', value: 'warning'},
+                                        {text: 'Alert', value: 'alert'},
+                                        {text: 'Primary', value: 'primary'},
+                                        {text: 'Secondary', value: 'secondary'}
+                                    ]
+                                },
+                                {
+                                    type: 'checkbox',
+                                    name: 'close',
+                                    checked: false,
+                                    label: 'Add close button?'
+                                }
+                            ],
+                            onsubmit: function (e) {
+                                var setType;
+                                var setClose;
+                                if (e.data.type) {
+                                    setType = "type=\"" + e.data.type + "\""
+                                } else {
+                                    setType = ""
+                                }
+
+                                if (e.data.close) {
+                                    setClose = ""
+                                } else {
+                                    setClose = "close=no"
+                                }
+                                editor.insertContent("[callout " + ' ' + setType + ' ' + setClose + "] " + e.data.title + " [/callout]");
+                            }
+                        })
+                    }
+                },
+                {
+                    text: 'Tooltip',
+                    value: 'tooltip',
+                    onclick: function (e) {
+                        e.stopPropagation();
+                        editor.insertContent("[tooltip position=\"top\" title=\"Insert Tooltip content here\" ]Tooltip[/tooltip]")
+                    }
                 },
                 {
                     text: 'Button',
@@ -299,7 +301,6 @@
                         });
                     }
                 }
-
             ]
         });
     });
