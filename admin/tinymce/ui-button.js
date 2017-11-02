@@ -153,7 +153,7 @@
 							}
 						},
 						{
-							text   : 'Tool Tip',
+							text   : 'Tooltip',
 							value  : 'tooltip',
 							onclick: function (e) {
 								e.stopPropagation();
