@@ -64,7 +64,7 @@
                     value: 'typography',
                     menu: [
                         {
-                            text: 'Check List',
+                            text: 'Checklist',
                             value: 'checklist',
                             onclick: function (e) {
                                 e.stopPropagation();
@@ -72,7 +72,7 @@
                             }
                         },
                         {
-                            text: 'Check List Circled',
+                            text: 'Checklist Circled',
                             value: 'checklist_circled',
                             onclick: function (e) {
                                 e.stopPropagation();
@@ -80,7 +80,7 @@
                             }
                         },
                         {
-                            text: 'Left Pull Quotes',
+                            text: 'Left Pull Quote',
                             value: 'pullquote_left',
                             onclick: function (e) {
                                 e.stopPropagation();
@@ -88,7 +88,7 @@
                             }
                         },
                         {
-                            text: 'Right Pull Quotes',
+                            text: 'Right Pull Quote',
                             value: 'pullquote_right',
                             onclick: function (e) {
                                 e.stopPropagation();
