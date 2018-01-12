@@ -85,7 +85,7 @@ class Camden_Add_Ons_Public {
 			'label'              => __( 'ministry', 'camden-add-ons' ),
 			'description'        => __( 'Ministry information pages', 'camden-add-ons' ),
 			'labels'             => $labels,
-			'supports'           => array( 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields', ),
+			'supports'           => array( 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields', 'page-attributes' ),
 			'taxonomies'         => array( 'group' ),
 			'has_archive'        => true,
 			'public'             => true,
