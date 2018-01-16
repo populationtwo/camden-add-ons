@@ -56,12 +56,16 @@ class Camden_Add_Ons_Public {
 		/* Define custom functionality.
 		 * Refer To http://codex.wordpress.org/Plugin_API#Hooks.2C_Actions_and_Filters
 		 */
-		add_action( 'init', array( $this, 'camden_register_post_type_ministry' ) );
-		add_action( 'init', array( $this, 'camden_ministry_group_taxonomy' ) );
-		add_action( 'init', array( $this, 'camden_register_post_type_slides' ) );
-		add_filter( 'post_updated_messages', array( $this, 'camden_ministry_updated_messages' ) );
-		add_filter( 'post_updated_messages', array( $this, 'camden_slide_updated_messages' ) );
-	}
+        add_action('init', array($this, 'camden_register_post_type_ministry'));
+        add_action('init', array($this, 'camden_ministry_group_taxonomy'));
+        add_action('init', array($this, 'camden_register_post_type_slides'));
+        add_filter('post_updated_messages', array($this, 'camden_ministry_updated_messages'));
+        add_filter('post_updated_messages', array($this, 'camden_slide_updated_messages'));
+        add_action('manage_edit-ministry_columns', array($this, 'add_new_ministry_column'));
+        add_action('manage_ministry_posts_custom_column', array($this, 'show_order_column'));
+        add_filter('manage_edit-ministry_sortable_columns', array($this, 'order_column_register_sortable'));
+
+    }
 
 
 	public function camden_register_post_type_ministry() {
@@ -71,10 +75,10 @@ class Camden_Add_Ons_Public {
 			'singular_name'      => _x( 'Ministry', 'Post Type Singular Name', 'camden-add-ons' ),
 			'menu_name'          => __( 'Ministry', 'camden-add-ons' ),
 			'parent_item_colon'  => __( 'Parent Ministry:', 'camden-add-ons' ),
-			'all_items'          => __( 'All Ministries:', 'camden-add-ons' ),
+			'all_items'          => __( 'All Ministries', 'camden-add-ons' ),
 			'view_item'          => __( 'View Ministry', 'camden-add-ons' ),
 			'add_new_item'       => __( 'Add New Ministry', 'camden-add-ons' ),
-			'add_new'            => __( 'New Ministry', 'camden-add-ons' ),
+			'add_new'            => __( 'Add New', 'camden-add-ons' ),
 			'edit_item'          => __( 'Edit Ministry', 'camden-add-ons' ),
 			'update_item'        => __( 'Update Ministry', 'camden-add-ons' ),
 			'search_items'       => __( 'Search ministries', 'camden-add-ons' ),
@@ -163,6 +167,50 @@ class Camden_Add_Ons_Public {
 
 
 	}
+
+    /**
+     * Add order column to Ministry admin
+     */
+    public function add_new_ministry_column($ministry_columns)
+    {
+
+        $ministry_columns = array(
+            'cb' => '<input type="checkbox" />',
+            'title' => __('Title'),
+            'taxonomy-ministry-group' => __('Groups'),
+            'menu_order' => __('Order'),
+            'date' => __('Date')
+        );
+        return $ministry_columns;
+
+    }
+
+    /**
+     * Show custom order column values
+     */
+    public function show_order_column($name)
+    {
+        global $post;
+
+        switch ($name) {
+            case 'menu_order':
+                $order = $post->menu_order;
+                echo $order;
+                break;
+            default:
+                break;
+        }
+
+    }
+
+    /**
+     * Make column sortable
+     */
+    public function order_column_register_sortable($columns)
+    {
+        $columns['menu_order'] = 'menu_order';
+        return $columns;
+    }
 
 	public function camden_register_post_type_slides() {
 
