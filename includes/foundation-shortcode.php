@@ -96,7 +96,7 @@ class REQ_Alertbox {
 		}
 
 		/* Create our output */
-		$output = '<div class="callout camden-foundation-callout' . $type . '"' . $timeout . $closebuttondata . ' >' . apply_filters( 'req_alertbox_content', $content ) . $closebutton . '</div>';
+		$output = '<div class="callout cd-foundation-callout' . $type . '"' . $timeout . $closebuttondata . ' >' . apply_filters( 'req_alertbox_content', $content ) . $closebutton . '</div>';
 
 		/* Return the output of the column. */
 
@@ -1194,7 +1194,7 @@ function camden_foundation_tabs( $params, $content = null ) {
 	$foundation_tabs['current_id'] = count( $foundation_tabs ) - 1;
 	do_shortcode( $content );
 
-	$scontent = '<div class="camden-foundation-tabs ' . $class . '">';
+	$scontent = '<div class="cd-foundation-tabs ' . $class . '">';
 	if ( isset( $foundation_tabs[ $id ]['tabs'] ) && is_array( $foundation_tabs[ $id ]['tabs'] )
 	     && isset( $foundation_tabs[ $id ]['panes'] )
 	     && is_array( $foundation_tabs[ $id ]['panes'] )
@@ -1264,7 +1264,7 @@ function camden_foundation_vtabs( $params, $content = null ) {
 	$foundation_tabs['current_id'] = count( $foundation_tabs ) - 1;
 	do_shortcode( $content );
 
-	$scontent = '<div class="camden-foundation-vertical-tabs ' . $class . '"><div class="row collapse">';
+	$scontent = '<div class="cd-foundation-vertical-tabs ' . $class . '"><div class="row collapse">';
 	if ( isset( $foundation_tabs[ $id ]['tabs'] ) && is_array( $foundation_tabs[ $id ]['tabs'] )
 	     && isset( $foundation_tabs[ $id ]['panes'] )
 	     && is_array( $foundation_tabs[ $id ]['panes'] )
@@ -1341,7 +1341,7 @@ function camden_foundation_accordion( $params, $content = null ) {
 	$foundation_accordion['current_id'] = count( $foundation_accordion ) - 1;
 	do_shortcode( $content );
 
-	$scontent = '<ul class="camden-foundation-accordion accordion ' . $class . '" data-accordion id="pfa-' . $id . '">';
+	$scontent = '<ul class="cd-foundation-accordion accordion ' . $class . '" data-accordion id="pfa-' . $id . '">';
 	if ( isset( $foundation_accordion[ $id ]['tabs'] ) && is_array( $foundation_accordion[ $id ]['tabs'] ) ) {
 		$scontent .= implode( '', $foundation_accordion[ $id ]['tabs'] );
 	}
